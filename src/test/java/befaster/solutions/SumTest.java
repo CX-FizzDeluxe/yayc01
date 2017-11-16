@@ -17,7 +17,7 @@ public class SumTest {
         assertThat(FizzBuzz.fizzBuzz(12), equalTo("fizz"));
         assertThat(FizzBuzz.fizzBuzz(5), equalTo("buzz"));
         assertThat(FizzBuzz.fizzBuzz(10), equalTo("buzz"));
-        assertThat(FizzBuzz.fizzBuzz(511111), equalTo("buzz"));
+        assertThat(FizzBuzz.fizzBuzz(511), equalTo("buzz"));
         
         assertThat(Sum.sum(0, 0), equalTo(0));
     }
