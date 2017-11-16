@@ -59,12 +59,10 @@ public class FizzBuzz {
     }
 
     private static boolean isDeluxeFizz(Integer num) {
-    	if (!isFizz(num)) return false;
-    	return isDeluxe(num, 3);
+    	return num % 3 == 0 && isDeluxe(num, 3);
     }
 
     private static boolean isDeluxeBuzz(Integer num) {
-    	if (!isBuzz(num)) return false;
-    	return isDeluxe(num, 5);
+    	return num % 5 == 0 && isDeluxe(num, 5);
     }
 }
