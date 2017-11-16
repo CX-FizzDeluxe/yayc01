@@ -10,6 +10,9 @@ public class FizzBuzz {
     	boolean isD = isDeluxe(number);
         if (by3 && by5 && isD) {
         	return "fizz buzz deluxe";
+        } 
+        if (by3 && by5) {
+        	return "fizz buzz";
         } else if (by3) {
         	return "fizz";
         } else if (by5) {
