@@ -5,15 +5,39 @@ import befaster.runner.SolutionNotImplementedException;
 public class FizzBuzz {
 
     public static String fizzBuzz(Integer number) {
-        if (number % 3 == 0 && number % 5 == 0) {
+    	boolean by3 = isBy3(number);
+    	boolean by5 = isBy5(number);
+        if (by3 && by5) {
         	return "fizz buzz";
-        } else if (number % 3 == 0) {
+        } else if (by3) {
         	return "fizz";
-        } else if (number % 5 == 0) {
+        } else if (by5) {
         	return "buzz";
         } else {
         	return number + "";
         }
     }
+
+    private static boolean isByNum(Integer num, Integer target) {
+    	if (num % target == 0) {
+    		return true;
+    	}
+    	while (num != 0) {
+    		if (num % 10 == target) {
+    			return true;
+    		}
+    		num /= 10;
+    	}
+    	return false;
+    }
+
+    private static boolean isBy5(Integer num) {
+    	return isByNum(num, 5);
+    }
+
+	private static boolean isBy3(Integer num) {
+    	return isByNum(num, 3);
+    }
+
 
 }
