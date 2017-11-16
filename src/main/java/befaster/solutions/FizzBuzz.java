@@ -2,6 +2,7 @@ package befaster.solutions;
 
 import befaster.runner.SolutionNotImplementedException;
 import java.util.*;
+
 public class FizzBuzz {
 	
     public static String fizzBuzz(Integer number) {
@@ -42,13 +43,14 @@ public class FizzBuzz {
     }
 
     private static int isDeluxe(Integer num) {
+    	boolean isEven = (num % 2 == 0);
     	if (num < 10) return 0;
     	int n = num % 10;
     	while (num != 0) {
     		if (num % 10 != n) return 0;
     		num /= 10;
     	}
-    	return num % 2 == 0 ? 7 : 11;
+    	return isEven ? 7 : 11;
     }
 
     private static int isBy5(Integer num) {
