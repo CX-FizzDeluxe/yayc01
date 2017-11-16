@@ -13,13 +13,23 @@ public class FizzBuzz {
         } 
         if (by3 && by5) {
         	return "fizz buzz";
-        } else if (by3) {
+        } 
+        if (by3 && isD) {
+        	return "fizz deluxe";
+        } 
+        if (by5 && isD) {
+        	return "buzz deluxe";
+        } 
+        if (by3) {
         	return "fizz";
-        } else if (by5) {
-        	return "buzz";
-        } else {
-        	return number + "";
         }
+        if (by5) {
+        	return "buzz";
+        }
+        if (isD) {
+        	return "deluxe";
+        }
+		return number + "";
     }
 
     private static boolean isByNum(Integer num, Integer target) {
