@@ -11,8 +11,14 @@ public class SumTest {
     public void compute_sum() {
         assertThat(FizzBuzz.fizzBuzz(1), equalTo("1"));
         assertThat(FizzBuzz.fizzBuzz(15), equalTo("fizz buzz"));
-        assertThat(FizzBuzz.fizzBuzz(3), equalTo("fizz"));
+        assertThat(FizzBuzz.fizzBuzz(5131), equalTo("buzz"));
+        assertThat(FizzBuzz.fizzBuzz(31), equalTo("fizz"));
+        assertThat(FizzBuzz.fizzBuzz(13), equalTo("fizz"));
+        assertThat(FizzBuzz.fizzBuzz(12), equalTo("fizz"));
         assertThat(FizzBuzz.fizzBuzz(5), equalTo("buzz"));
+        assertThat(FizzBuzz.fizzBuzz(10), equalTo("buzz"));
+        assertThat(FizzBuzz.fizzBuzz(511111), equalTo("buzz"));
+        
         assertThat(Sum.sum(0, 0), equalTo(0));
     }
 }
