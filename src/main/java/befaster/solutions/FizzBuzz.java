@@ -1,7 +1,7 @@
 package befaster.solutions;
 
 import befaster.runner.SolutionNotImplementedException;
-
+import java.util.*;
 public class FizzBuzz {
 	
     public static String fizzBuzz(Integer number) {
